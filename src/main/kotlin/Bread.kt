@@ -1,3 +1,6 @@
+import kotlin.math.roundToInt
+import kotlin.math.roundToLong
+
 //parameters updated on 10.7.22
 class Bread(customerName: String,
             customerPhone: String,
@@ -59,13 +62,15 @@ class Bread(customerName: String,
             price = ((price - (price * .10))*qty)
         }
 
+        var roundPrice = Math.round(price * 100.0) / 100.0
+
         println("Name: $customerName" +
                 "\nPhone Number: $customerPhone" +
                 "\nEmail: $customerEmail" +
                 "\nLoaf: $fullLoaf" +
                 "\nCoupon: $coupon" +
                 "\nQuantity: $qty" +
-                "\nPrice: \$$price")
+                "\nPrice: $$roundPrice")
         }
 
 }

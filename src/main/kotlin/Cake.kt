@@ -65,6 +65,8 @@ class Cake (customerName: String,
             price = (price*qty)
         }
 
+        var roundPrice = Math.round(price * 100.0) / 100.0
+
         println("Name: $customerName" +
                 "\nPhone Number: $customerPhone" +
                 "\nEmail: $customerEmail" +
@@ -73,7 +75,7 @@ class Cake (customerName: String,
                 "\nBirthday: $birthday" +
                 "\nCoupon: $coupon" +
                 "\nQuantity: $qty" +
-                "\nPrice: $price")
+                "\nPrice: $roundPrice")
     }
 
 
